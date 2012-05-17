@@ -15,6 +15,7 @@
 
 @property (assign) IBOutlet WDWindow *window;
 @property (assign) IBOutlet WebView *webView;
+@property (assign) IBOutlet NSMenu *statusMenu;
 
 - (IBAction)toggleBackground:(id)sender;
 
