@@ -29,6 +29,12 @@
     _background = YES;
 }
 
+- (void)setFrameToMainScreen {
+    NSSize mainScreenSize = [self screenResolution];
+    [self setFrameOrigin:NSMakePoint(0, 0)];
+    [self setContentSize:mainScreenSize];
+}
+
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation {
 #ifdef DEBUG
     self = [super initWithContentRect:contentRect styleMask:windowStyle backing:bufferingType defer:deferCreation];
@@ -39,18 +45,17 @@
     if(self) {
         _background = NO;
 
-        #ifndef DEBUG
+#ifndef DEBUG
         [self setCollectionBehavior:(NSWindowCollectionBehaviorCanJoinAllSpaces | NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorIgnoresCycle)];
-
-        NSSize mainScreenSize = [self screenResolution];
-        [self setFrameOrigin:NSMakePoint(0, 0)];
-        [self setContentSize:mainScreenSize];
-
-        [self toggleDesktopBackground];
-        #endif
+        [self setFrameToMainScreen];
+#endif
     }
 
     return self;
+}
+
+- (BOOL)acceptsFirstResponder {
+    return !self.background;
 }
 
 - (BOOL)canBecomeMainWindow {

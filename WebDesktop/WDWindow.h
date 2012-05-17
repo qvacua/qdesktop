@@ -6,4 +6,7 @@
 
 - (void)toggleDesktopBackground;
 
+- (void)setFrameToMainScreen;
+
+
 @end
