@@ -17,6 +17,10 @@
 		4B609C961564F0B7004F9E5F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B609C761564F0B7004F9E5F /* Cocoa.framework */; };
 		4B609C9E1564F0B7004F9E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B609C9C1564F0B7004F9E5F /* InfoPlist.strings */; };
 		4B609CA11564F0B7004F9E5F /* WebDesktopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B609CA01564F0B7004F9E5F /* WebDesktopTests.m */; };
+		4B609CAF1564F2AC004F9E5F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B609CAE1564F2AC004F9E5F /* WebKit.framework */; };
+		4B609CB01564F2AC004F9E5F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B609CAE1564F2AC004F9E5F /* WebKit.framework */; };
+		4B609CB01564F2AC004F9E61 /* WDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B609CB01564F2AC004F9E60 /* WDWindow.m */; };
+		4B609CB01564F2AC004F9E62 /* WDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B609CB01564F2AC004F9E60 /* WDWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		4B609C9D1564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B609C9F1564F0B7004F9E5F /* WebDesktopTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebDesktopTests.h; sourceTree = "<group>"; };
 		4B609CA01564F0B7004F9E5F /* WebDesktopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebDesktopTests.m; sourceTree = "<group>"; };
+		4B609CAE1564F2AC004F9E5F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = ../../../../../System/Library/Frameworks/WebKit.framework; sourceTree = "<group>"; };
+		4B609CB01564F2AC004F9E60 /* WDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDWindow.m; sourceTree = "<group>"; };
+		4B609CB01564F2AC004F9E63 /* WDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDWindow.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B609C771564F0B7004F9E5F /* Cocoa.framework in Frameworks */,
+				4B609CAF1564F2AC004F9E5F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,7 @@
 			files = (
 				4B609C951564F0B7004F9E5F /* SenTestingKit.framework in Frameworks */,
 				4B609C961564F0B7004F9E5F /* Cocoa.framework in Frameworks */,
+				4B609CB01564F2AC004F9E5F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +103,7 @@
 		4B609C751564F0B7004F9E5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B609CAE1564F2AC004F9E5F /* WebKit.framework */,
 				4B609C761564F0B7004F9E5F /* Cocoa.framework */,
 				4B609C941564F0B7004F9E5F /* SenTestingKit.framework */,
 				4B609C781564F0B7004F9E5F /* Other Frameworks */,
@@ -114,6 +124,8 @@
 		4B609C7C1564F0B7004F9E5F /* WebDesktop */ = {
 			isa = PBXGroup;
 			children = (
+				4B609CB01564F2AC004F9E63 /* WDWindow.h */,
+				4B609CB01564F2AC004F9E60 /* WDWindow.m */,
 				4B609C881564F0B7004F9E5F /* WDAppDelegate.h */,
 				4B609C891564F0B7004F9E5F /* WDAppDelegate.m */,
 				4B609C8B1564F0B7004F9E5F /* MainMenu.xib */,
@@ -263,6 +275,7 @@
 			files = (
 				4B609C831564F0B7004F9E5F /* main.m in Sources */,
 				4B609C8A1564F0B7004F9E5F /* WDAppDelegate.m in Sources */,
+				4B609CB01564F2AC004F9E61 /* WDWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B609CA11564F0B7004F9E5F /* WebDesktopTests.m in Sources */,
+				4B609CB01564F2AC004F9E62 /* WDWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +450,7 @@
 				4B609CA61564F0B7004F9E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B609CA71564F0B7004F9E5F /* Build configuration list for PBXNativeTarget "WebDesktopTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +459,7 @@
 				4B609CA91564F0B7004F9E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

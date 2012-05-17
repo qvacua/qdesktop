@@ -7,9 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
+
+@class WDWindow;
 
 @interface WDAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet WDWindow *window;
+@property (assign) IBOutlet WebView *webView;
+
+- (IBAction)toggleBackground:(id)sender;
 
 @end
