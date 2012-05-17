@@ -35,19 +35,19 @@
 		4B609C791564F0B7004F9E5F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4B609C7A1564F0B7004F9E5F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4B609C7B1564F0B7004F9E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4B609C7E1564F0B7004F9E5F /* WebDesktop-Info.plist */ = {isa = PBXFileReference; path = "WebDesktop-Info.plist"; sourceTree = "<group>"; };
+		4B609C7E1564F0B7004F9E5F /* WebDesktop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebDesktop-Info.plist"; sourceTree = "<group>"; };
 		4B609C801564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B609C821564F0B7004F9E5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4B609C841564F0B7004F9E5F /* WebDesktop-Prefix.pch */ = {isa = PBXFileReference; path = "WebDesktop-Prefix.pch"; sourceTree = "<group>"; };
+		4B609C841564F0B7004F9E5F /* WebDesktop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebDesktop-Prefix.pch"; sourceTree = "<group>"; };
 		4B609C861564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		4B609C881564F0B7004F9E5F /* WDAppDelegate.h */ = {isa = PBXFileReference; path = WDAppDelegate.h; sourceTree = "<group>"; };
+		4B609C881564F0B7004F9E5F /* WDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDAppDelegate.h; sourceTree = "<group>"; };
 		4B609C891564F0B7004F9E5F /* WDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDAppDelegate.m; sourceTree = "<group>"; };
 		4B609C8C1564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4B609C931564F0B7004F9E5F /* WebDesktopTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebDesktopTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B609C941564F0B7004F9E5F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4B609C9B1564F0B7004F9E5F /* WebDesktopTests-Info.plist */ = {isa = PBXFileReference; path = "WebDesktopTests-Info.plist"; sourceTree = "<group>"; };
+		4B609C9B1564F0B7004F9E5F /* WebDesktopTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebDesktopTests-Info.plist"; sourceTree = "<group>"; };
 		4B609C9D1564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4B609C9F1564F0B7004F9E5F /* WebDesktopTests.h */ = {isa = PBXFileReference; path = WebDesktopTests.h; sourceTree = "<group>"; };
+		4B609C9F1564F0B7004F9E5F /* WebDesktopTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebDesktopTests.h; sourceTree = "<group>"; };
 		4B609CA01564F0B7004F9E5F /* WebDesktopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebDesktopTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

@@ -1,0 +1,8 @@
+.DS_Store
+build
+.idea
+Externals/*
+*.swp
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+
