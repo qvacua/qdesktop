@@ -30,11 +30,16 @@
 }
 
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation {
+#ifdef DEBUG
+    self = [super initWithContentRect:contentRect styleMask:windowStyle backing:bufferingType defer:deferCreation];
+#else
     self = [super initWithContentRect:contentRect styleMask:NSBorderlessWindowMask backing:bufferingType defer:deferCreation];
+#endif
 
     if(self) {
         _background = NO;
 
+        #ifndef DEBUG
         [self setCollectionBehavior:(NSWindowCollectionBehaviorCanJoinAllSpaces | NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorIgnoresCycle)];
 
         NSSize mainScreenSize = [self screenResolution];
@@ -42,6 +47,7 @@
         [self setContentSize:mainScreenSize];
 
         [self toggleDesktopBackground];
+        #endif
     }
 
     return self;

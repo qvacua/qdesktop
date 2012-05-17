@@ -1,13 +1,6 @@
-//
-//  WDAppDelegate.m
-//  WebDesktop
-//
-//  Created by Tae Won Ha on 5/17/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
 #import "WDAppDelegate.h"
 #import "WDWindow.h"
+#import "WebView+WDZoom.h"
 
 @interface WDAppDelegate ()
 - (void)activateStatusMenu;
@@ -20,6 +13,7 @@
 @synthesize window = _window;
 @synthesize webView = _webView;
 @synthesize statusMenu = _statusMenu;
+@synthesize urlWindow = _urlWindow;
 
 - (void)activateStatusMenu {
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
@@ -35,19 +29,43 @@
     [self activateStatusMenu];
 
 //    [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"file:///Volumes/Data/hat/.webdesktop/index.html"]]];
-    [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://icanhascheezburger.com/"]]];
+    [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.huffingtonpost.com/"]]];
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem {
-    if ([menuItem action] == @selector(toggleBackground:)) {
+    const SEL action = [menuItem action];
+
+    if (action == @selector(toggleBackground:)) {
+        return YES;
+    }
+
+    if (action == @selector(zoomIn:)
+        || action == @selector(zoomToActualSize:)
+        || action == @selector(zoomOut:)) {
         return YES;
     }
 
     return [super validateMenuItem:menuItem];
 }
 
+- (IBAction)loadUrl:(id)sender {
+
+}
+
 - (IBAction)toggleBackground:(id)sender {
     [self.window toggleDesktopBackground];
+}
+
+- (IBAction)zoomIn:(id)sender {
+    [_webView zoomPageIn:self];
+}
+
+- (IBAction)zoomToActualSize:(id)sender {
+    [_webView resetPageZoom:self];
+}
+
+- (IBAction)zoomOut:(id)sender {
+    [_webView zoomPageOut:self];
 }
 
 @end

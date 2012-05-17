@@ -21,6 +21,8 @@
 		4B609CB01564F2AC004F9E5F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B609CAE1564F2AC004F9E5F /* WebKit.framework */; };
 		4B609CB01564F2AC004F9E61 /* WDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B609CB01564F2AC004F9E60 /* WDWindow.m */; };
 		4B609CB01564F2AC004F9E62 /* WDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B609CB01564F2AC004F9E60 /* WDWindow.m */; };
+		4B609CB01564F2AC004F9E65 /* WDWebView.m in Sources */ = {isa = PBXBuildFile; };
+		4B609CB01564F2AC004F9E66 /* WDWebView.m in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,7 @@
 		4B609CAE1564F2AC004F9E5F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = ../../../../../System/Library/Frameworks/WebKit.framework; sourceTree = "<group>"; };
 		4B609CB01564F2AC004F9E60 /* WDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDWindow.m; sourceTree = "<group>"; };
 		4B609CB01564F2AC004F9E63 /* WDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDWindow.h; sourceTree = "<group>"; };
+		4B609CB01564F2AC004F9E6B /* WebView+WDZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+WDZoom.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 		4B609C7C1564F0B7004F9E5F /* WebDesktop */ = {
 			isa = PBXGroup;
 			children = (
+				4B609CB01564F2AC004F9E6B /* WebView+WDZoom.h */,
 				4B609CB01564F2AC004F9E63 /* WDWindow.h */,
 				4B609CB01564F2AC004F9E60 /* WDWindow.m */,
 				4B609C881564F0B7004F9E5F /* WDAppDelegate.h */,
@@ -276,6 +280,7 @@
 				4B609C831564F0B7004F9E5F /* main.m in Sources */,
 				4B609C8A1564F0B7004F9E5F /* WDAppDelegate.m in Sources */,
 				4B609CB01564F2AC004F9E61 /* WDWindow.m in Sources */,
+				4B609CB01564F2AC004F9E65 /* WDWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +290,7 @@
 			files = (
 				4B609CA11564F0B7004F9E5F /* WebDesktopTests.m in Sources */,
 				4B609CB01564F2AC004F9E62 /* WDWindow.m in Sources */,
+				4B609CB01564F2AC004F9E66 /* WDWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
