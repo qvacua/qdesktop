@@ -2,13 +2,13 @@
 #import <WebKit/WebKit.h>
 
 @class QDWindow;
-@class WDWebView;
 
 @interface QDAppDelegate : NSObject <NSApplicationDelegate>
 
+@property (assign) IBOutlet NSMenu *statusMenu;
+
 @property (assign) IBOutlet QDWindow *window;
 @property (assign) IBOutlet WebView *webView;
-@property (assign) IBOutlet NSMenu *statusMenu;
 
 @property (assign) IBOutlet NSWindow *urlWindow;
 @property (assign) IBOutlet NSTextField *urlField;

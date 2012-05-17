@@ -2,6 +2,9 @@
 
 @interface QDWindow ()
 - (NSSize)screenResolution;
+
+- (void)fillScreen;
+
 @end
 
 @implementation QDWindow {
@@ -29,10 +32,9 @@
     _background = YES;
 }
 
-- (void)setFrameToMainScreen {
-    NSSize mainScreenSize = [self screenResolution];
+- (void)fillScreen {
+    [self setContentSize:[self screenResolution]];
     [self setFrameOrigin:NSMakePoint(0, 0)];
-    [self setContentSize:mainScreenSize];
 }
 
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation {
@@ -47,7 +49,7 @@
 
 #ifndef DEBUG
         [self setCollectionBehavior:(NSWindowCollectionBehaviorCanJoinAllSpaces | NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorIgnoresCycle)];
-        [self setFrameToMainScreen];
+        [self fillScreen];
 #endif
     }
 

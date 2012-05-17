@@ -2,10 +2,11 @@
 #import "QDWindow.h"
 #import "WebView+QDZoom.h"
 
-static NSString *const DEFAULT_URL = @"url";
+static NSString *const DEFAULT_URL_KEY = @"url";
+static NSString *const DEFAULT_URL_VALUE = @"http://www.hataewon.com";
 
 @interface QDAppDelegate ()
-- (void)activateStatusMenu;
+- (void)initStatusMenu;
 @end
 
 @implementation QDAppDelegate {
@@ -18,7 +19,7 @@ static NSString *const DEFAULT_URL = @"url";
 @synthesize urlWindow = _urlWindow;
 @synthesize urlField = _urlField;
 
-- (void)activateStatusMenu {
+- (void)initStatusMenu {
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
 
     _statusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
@@ -28,15 +29,21 @@ static NSString *const DEFAULT_URL = @"url";
     [_statusItem setMenu:self.statusMenu];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+- (void)setDefaultsIfNecessary {
     NSUserDefaults *const userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:DEFAULT_URL] == nil) {
-        [userDefaults setObject:@"http://www.hataewon.com" forKey:DEFAULT_URL];
+
+    if ([userDefaults objectForKey:DEFAULT_URL_KEY] == nil) {
+        [userDefaults setObject:DEFAULT_URL_VALUE forKey:DEFAULT_URL_KEY];
     }
+}
 
-    NSString *url = [userDefaults objectForKey:DEFAULT_URL];
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self setDefaultsIfNecessary];
 
-    [self activateStatusMenu];
+    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:DEFAULT_URL_KEY];
+
+    [self initStatusMenu];
+
     [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 
 #ifndef DEBUG
@@ -49,17 +56,15 @@ static NSString *const DEFAULT_URL = @"url";
 
     if (action == @selector(toggleBackground:)
         || action == @selector(loadUrl:)
-        || action == @selector(openLoadUrlWindow:)) {
-        return YES;
-    }
-
-    if (action == @selector(zoomIn:)
+        || action == @selector(openLoadUrlWindow:)
+        || action == @selector(zoomIn:)
         || action == @selector(zoomToActualSize:)
-        || action == @selector(zoomOut:)) {
+        || action == @selector(zoomOut:))
+    {
         return YES;
     }
 
-    return [super validateMenuItem:menuItem];
+    return NO;
 }
 
 - (IBAction)openLoadUrlWindow:(id)sender {
@@ -79,9 +84,8 @@ static NSString *const DEFAULT_URL = @"url";
     NSString *const string = [self.urlField stringValue];
     NSURL *url = [NSURL URLWithString:string];
     [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
-    [self.window setFrameToMainScreen];
 
-    [[NSUserDefaults standardUserDefaults] setObject:string forKey:DEFAULT_URL];
+    [[NSUserDefaults standardUserDefaults] setObject:string forKey:DEFAULT_URL_KEY];
 }
 
 - (IBAction)toggleBackground:(id)sender {
