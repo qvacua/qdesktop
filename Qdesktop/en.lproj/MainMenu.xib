@@ -826,7 +826,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="597955677">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="WebView" id="625094157">
@@ -851,7 +851,6 @@
 							</set>
 							<string key="NSFrameSize">{480, 270}</string>
 							<reference key="NSSuperview" ref="597955677"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="FrameName"/>
@@ -872,8 +871,6 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{480, 270}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="625094157"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
@@ -962,6 +959,14 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 					</object>
+					<object class="NSMenuItem" id="562067254">
+						<reference key="NSMenu" ref="887580079"/>
+						<string key="NSTitle">About Qdesktop</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="35465992"/>
+						<reference key="NSMixedImage" ref="502551668"/>
+					</object>
 					<object class="NSMenuItem" id="648997426">
 						<reference key="NSMenu" ref="887580079"/>
 						<string key="NSTitle">Quit</string>
@@ -984,7 +989,7 @@
 				<string key="NSWindowContentMaxSize">{1280, 84}</string>
 				<string key="NSWindowContentMinSize">{300, 84}</string>
 				<object class="NSView" key="NSWindowView" id="886340906">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSTextField" id="618576488">
@@ -992,7 +997,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{17, 47}, {28, 14}}</string>
 							<reference key="NSSuperview" ref="886340906"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="6930510"/>
 							<string key="NSReuseIdentifierKey">_NS:1505</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1032,7 +1036,6 @@
 							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{53, 45}, {567, 19}}</string>
 							<reference key="NSSuperview" ref="886340906"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1066483394"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1066,8 +1069,6 @@
 							<int key="NSvFlags">265</int>
 							<string key="NSFrame">{{543, 13}, {82, 28}}</string>
 							<reference key="NSSuperview" ref="886340906"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="648230608">
@@ -1090,7 +1091,6 @@
 							<int key="NSvFlags">265</int>
 							<string key="NSFrame">{{463, 13}, {82, 28}}</string>
 							<reference key="NSSuperview" ref="886340906"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="661914480"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1111,8 +1111,6 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{640, 84}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="618576488"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
@@ -1155,6 +1153,14 @@
 						<reference key="destination" ref="976324537"/>
 					</object>
 					<int key="connectionID">495</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">orderFrontStandardAboutPanel:</string>
+						<reference key="source" ref="1021"/>
+						<reference key="destination" ref="562067254"/>
+					</object>
+					<int key="connectionID">626</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -2250,6 +2256,7 @@
 							<reference ref="834036268"/>
 							<reference ref="950799041"/>
 							<reference ref="706684067"/>
+							<reference ref="562067254"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -2409,6 +2416,11 @@
 						<reference key="object" ref="625094157"/>
 						<reference key="parent" ref="597955677"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">625</int>
+						<reference key="object" ref="562067254"/>
+						<reference key="parent" ref="887580079"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -2522,6 +2534,7 @@
 				<string key="616.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="620.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="622.IBPluginDependency">com.apple.WebKitIBPlugin</string>
+				<string key="625.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="73.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="74.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2537,7 +2550,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">624</int>
+			<int key="maxID">626</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2623,16 +2636,11 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">WebView</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="reloadFromOrigin:">id</string>
 						<string key="resetPageZoom:">id</string>
 						<string key="zoomPageIn:">id</string>
 						<string key="zoomPageOut:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="reloadFromOrigin:">
-							<string key="name">reloadFromOrigin:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 						<object class="IBActionInfo" key="resetPageZoom:">
 							<string key="name">resetPageZoom:</string>
 							<string key="candidateClassName">id</string>
