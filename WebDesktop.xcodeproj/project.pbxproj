@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B609C771564F0B7004F9E5F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B609C761564F0B7004F9E5F /* Cocoa.framework */; };
+		4B609C811564F0B7004F9E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B609C7F1564F0B7004F9E5F /* InfoPlist.strings */; };
+		4B609C831564F0B7004F9E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B609C821564F0B7004F9E5F /* main.m */; };
+		4B609C871564F0B7004F9E5F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4B609C851564F0B7004F9E5F /* Credits.rtf */; };
+		4B609C8A1564F0B7004F9E5F /* WDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B609C891564F0B7004F9E5F /* WDAppDelegate.m */; };
+		4B609C8D1564F0B7004F9E5F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B609C8B1564F0B7004F9E5F /* MainMenu.xib */; };
+		4B609C951564F0B7004F9E5F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B609C941564F0B7004F9E5F /* SenTestingKit.framework */; };
+		4B609C961564F0B7004F9E5F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B609C761564F0B7004F9E5F /* Cocoa.framework */; };
+		4B609C9E1564F0B7004F9E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B609C9C1564F0B7004F9E5F /* InfoPlist.strings */; };
+		4B609CA11564F0B7004F9E5F /* WebDesktopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B609CA01564F0B7004F9E5F /* WebDesktopTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B609C971564F0B7004F9E5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B609C691564F0B7004F9E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B609C711564F0B7004F9E5F;
+			remoteInfo = WebDesktop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B609C721564F0B7004F9E5F /* WebDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B609C761564F0B7004F9E5F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4B609C791564F0B7004F9E5F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4B609C7A1564F0B7004F9E5F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4B609C7B1564F0B7004F9E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B609C7E1564F0B7004F9E5F /* WebDesktop-Info.plist */ = {isa = PBXFileReference; path = "WebDesktop-Info.plist"; sourceTree = "<group>"; };
+		4B609C801564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B609C821564F0B7004F9E5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B609C841564F0B7004F9E5F /* WebDesktop-Prefix.pch */ = {isa = PBXFileReference; path = "WebDesktop-Prefix.pch"; sourceTree = "<group>"; };
+		4B609C861564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4B609C881564F0B7004F9E5F /* WDAppDelegate.h */ = {isa = PBXFileReference; path = WDAppDelegate.h; sourceTree = "<group>"; };
+		4B609C891564F0B7004F9E5F /* WDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDAppDelegate.m; sourceTree = "<group>"; };
+		4B609C8C1564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4B609C931564F0B7004F9E5F /* WebDesktopTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebDesktopTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B609C941564F0B7004F9E5F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4B609C9B1564F0B7004F9E5F /* WebDesktopTests-Info.plist */ = {isa = PBXFileReference; path = "WebDesktopTests-Info.plist"; sourceTree = "<group>"; };
+		4B609C9D1564F0B7004F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B609C9F1564F0B7004F9E5F /* WebDesktopTests.h */ = {isa = PBXFileReference; path = WebDesktopTests.h; sourceTree = "<group>"; };
+		4B609CA01564F0B7004F9E5F /* WebDesktopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebDesktopTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B609C6F1564F0B7004F9E5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B609C771564F0B7004F9E5F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B609C8F1564F0B7004F9E5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B609C951564F0B7004F9E5F /* SenTestingKit.framework in Frameworks */,
+				4B609C961564F0B7004F9E5F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B609C671564F0B7004F9E5F = {
+			isa = PBXGroup;
+			children = (
+				4B609C7C1564F0B7004F9E5F /* WebDesktop */,
+				4B609C991564F0B7004F9E5F /* WebDesktopTests */,
+				4B609C751564F0B7004F9E5F /* Frameworks */,
+				4B609C731564F0B7004F9E5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B609C731564F0B7004F9E5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B609C721564F0B7004F9E5F /* WebDesktop.app */,
+				4B609C931564F0B7004F9E5F /* WebDesktopTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B609C751564F0B7004F9E5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B609C761564F0B7004F9E5F /* Cocoa.framework */,
+				4B609C941564F0B7004F9E5F /* SenTestingKit.framework */,
+				4B609C781564F0B7004F9E5F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B609C781564F0B7004F9E5F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B609C791564F0B7004F9E5F /* AppKit.framework */,
+				4B609C7A1564F0B7004F9E5F /* CoreData.framework */,
+				4B609C7B1564F0B7004F9E5F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4B609C7C1564F0B7004F9E5F /* WebDesktop */ = {
+			isa = PBXGroup;
+			children = (
+				4B609C881564F0B7004F9E5F /* WDAppDelegate.h */,
+				4B609C891564F0B7004F9E5F /* WDAppDelegate.m */,
+				4B609C8B1564F0B7004F9E5F /* MainMenu.xib */,
+				4B609C7D1564F0B7004F9E5F /* Supporting Files */,
+			);
+			path = WebDesktop;
+			sourceTree = "<group>";
+		};
+		4B609C7D1564F0B7004F9E5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B609C7E1564F0B7004F9E5F /* WebDesktop-Info.plist */,
+				4B609C7F1564F0B7004F9E5F /* InfoPlist.strings */,
+				4B609C821564F0B7004F9E5F /* main.m */,
+				4B609C841564F0B7004F9E5F /* WebDesktop-Prefix.pch */,
+				4B609C851564F0B7004F9E5F /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B609C991564F0B7004F9E5F /* WebDesktopTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B609C9F1564F0B7004F9E5F /* WebDesktopTests.h */,
+				4B609CA01564F0B7004F9E5F /* WebDesktopTests.m */,
+				4B609C9A1564F0B7004F9E5F /* Supporting Files */,
+			);
+			path = WebDesktopTests;
+			sourceTree = "<group>";
+		};
+		4B609C9A1564F0B7004F9E5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B609C9B1564F0B7004F9E5F /* WebDesktopTests-Info.plist */,
+				4B609C9C1564F0B7004F9E5F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B609C711564F0B7004F9E5F /* WebDesktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B609CA41564F0B7004F9E5F /* Build configuration list for PBXNativeTarget "WebDesktop" */;
+			buildPhases = (
+				4B609C6E1564F0B7004F9E5F /* Sources */,
+				4B609C6F1564F0B7004F9E5F /* Frameworks */,
+				4B609C701564F0B7004F9E5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebDesktop;
+			productName = WebDesktop;
+			productReference = 4B609C721564F0B7004F9E5F /* WebDesktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B609C921564F0B7004F9E5F /* WebDesktopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B609CA71564F0B7004F9E5F /* Build configuration list for PBXNativeTarget "WebDesktopTests" */;
+			buildPhases = (
+				4B609C8E1564F0B7004F9E5F /* Sources */,
+				4B609C8F1564F0B7004F9E5F /* Frameworks */,
+				4B609C901564F0B7004F9E5F /* Resources */,
+				4B609C911564F0B7004F9E5F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B609C981564F0B7004F9E5F /* PBXTargetDependency */,
+			);
+			name = WebDesktopTests;
+			productName = WebDesktopTests;
+			productReference = 4B609C931564F0B7004F9E5F /* WebDesktopTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B609C691564F0B7004F9E5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WD;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 4B609C6C1564F0B7004F9E5F /* Build configuration list for PBXProject "WebDesktop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B609C671564F0B7004F9E5F;
+			productRefGroup = 4B609C731564F0B7004F9E5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B609C711564F0B7004F9E5F /* WebDesktop */,
+				4B609C921564F0B7004F9E5F /* WebDesktopTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B609C701564F0B7004F9E5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B609C811564F0B7004F9E5F /* InfoPlist.strings in Resources */,
+				4B609C871564F0B7004F9E5F /* Credits.rtf in Resources */,
+				4B609C8D1564F0B7004F9E5F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B609C901564F0B7004F9E5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B609C9E1564F0B7004F9E5F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B609C911564F0B7004F9E5F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B609C6E1564F0B7004F9E5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B609C831564F0B7004F9E5F /* main.m in Sources */,
+				4B609C8A1564F0B7004F9E5F /* WDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B609C8E1564F0B7004F9E5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B609CA11564F0B7004F9E5F /* WebDesktopTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B609C981564F0B7004F9E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B609C711564F0B7004F9E5F /* WebDesktop */;
+			targetProxy = 4B609C971564F0B7004F9E5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B609C7F1564F0B7004F9E5F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B609C801564F0B7004F9E5F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B609C851564F0B7004F9E5F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B609C861564F0B7004F9E5F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4B609C8B1564F0B7004F9E5F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B609C8C1564F0B7004F9E5F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4B609C9C1564F0B7004F9E5F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B609C9D1564F0B7004F9E5F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B609CA21564F0B7004F9E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4B609CA31564F0B7004F9E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4B609CA51564F0B7004F9E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebDesktop/WebDesktop-Prefix.pch";
+				INFOPLIST_FILE = "WebDesktop/WebDesktop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B609CA61564F0B7004F9E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebDesktop/WebDesktop-Prefix.pch";
+				INFOPLIST_FILE = "WebDesktop/WebDesktop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4B609CA81564F0B7004F9E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebDesktop.app/Contents/MacOS/WebDesktop";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebDesktop/WebDesktop-Prefix.pch";
+				INFOPLIST_FILE = "WebDesktopTests/WebDesktopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4B609CA91564F0B7004F9E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebDesktop.app/Contents/MacOS/WebDesktop";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebDesktop/WebDesktop-Prefix.pch";
+				INFOPLIST_FILE = "WebDesktopTests/WebDesktopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B609C6C1564F0B7004F9E5F /* Build configuration list for PBXProject "WebDesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B609CA21564F0B7004F9E5F /* Debug */,
+				4B609CA31564F0B7004F9E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B609CA41564F0B7004F9E5F /* Build configuration list for PBXNativeTarget "WebDesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B609CA51564F0B7004F9E5F /* Debug */,
+				4B609CA61564F0B7004F9E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4B609CA71564F0B7004F9E5F /* Build configuration list for PBXNativeTarget "WebDesktopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B609CA81564F0B7004F9E5F /* Debug */,
+				4B609CA91564F0B7004F9E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B609C691564F0B7004F9E5F /* Project object */;
+}
