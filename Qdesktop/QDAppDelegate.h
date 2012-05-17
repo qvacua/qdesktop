@@ -1,12 +1,12 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@class WDWindow;
+@class QDWindow;
 @class WDWebView;
 
-@interface WDAppDelegate : NSObject <NSApplicationDelegate>
+@interface QDAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet WDWindow *window;
+@property (assign) IBOutlet QDWindow *window;
 @property (assign) IBOutlet WebView *webView;
 @property (assign) IBOutlet NSMenu *statusMenu;
 

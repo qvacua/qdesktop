@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 
-@interface WebView (WDZoom)
+@interface WebView (QDZoom)
 
 - (IBAction)zoomPageIn:(id)sender;
 - (IBAction)zoomPageOut:(id)sender;

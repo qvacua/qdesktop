@@ -1,10 +1,10 @@
-#import "WDWindow.h"
+#import "QDWindow.h"
 
-@interface WDWindow ()
+@interface QDWindow ()
 - (NSSize)screenResolution;
 @end
 
-@implementation WDWindow {
+@implementation QDWindow {
     BOOL _background;
 }
 

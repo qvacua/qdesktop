@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B5E224115655A5000B82E26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E224015655A5000B82E26 /* Cocoa.framework */; };
+		4B5E224B15655A5000B82E26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E224915655A5000B82E26 /* InfoPlist.strings */; };
+		4B5E224D15655A5000B82E26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E224C15655A5000B82E26 /* main.m */; };
+		4B5E225115655A5000B82E26 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E224F15655A5000B82E26 /* Credits.rtf */; };
+		4B5E225415655A5000B82E26 /* QDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E225315655A5000B82E26 /* QDAppDelegate.m */; };
+		4B5E225715655A5000B82E26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E225515655A5000B82E26 /* MainMenu.xib */; };
+		4B5E225F15655A5000B82E26 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E225E15655A5000B82E26 /* SenTestingKit.framework */; };
+		4B5E226015655A5000B82E26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E224015655A5000B82E26 /* Cocoa.framework */; };
+		4B5E226815655A5000B82E26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E226615655A5000B82E26 /* InfoPlist.strings */; };
+		4B5E226B15655A5000B82E26 /* QdesktopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E226A15655A5000B82E26 /* QdesktopTests.m */; };
+		4B5E227715655AAA00B82E26 /* QDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E227515655AAA00B82E26 /* QDWindow.m */; };
+		4B5E227815655AAA00B82E26 /* QDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E227515655AAA00B82E26 /* QDWindow.m */; };
+		4B5E227A15655BFA00B82E26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E227915655BFA00B82E26 /* WebKit.framework */; };
+		4B5E227B15655BFA00B82E26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E227915655BFA00B82E26 /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B5E226115655A5000B82E26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5E223315655A4F00B82E26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B5E223B15655A5000B82E26;
+			remoteInfo = Qdesktop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B5E223C15655A5000B82E26 /* Qdesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qdesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5E224015655A5000B82E26 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4B5E224315655A5000B82E26 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4B5E224415655A5000B82E26 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4B5E224515655A5000B82E26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B5E224815655A5000B82E26 /* Qdesktop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Qdesktop-Info.plist"; sourceTree = "<group>"; };
+		4B5E224A15655A5000B82E26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B5E224C15655A5000B82E26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B5E224E15655A5000B82E26 /* Qdesktop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Qdesktop-Prefix.pch"; sourceTree = "<group>"; };
+		4B5E225015655A5000B82E26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4B5E225215655A5000B82E26 /* QDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QDAppDelegate.h; sourceTree = "<group>"; };
+		4B5E225315655A5000B82E26 /* QDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDAppDelegate.m; sourceTree = "<group>"; };
+		4B5E225615655A5000B82E26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4B5E225D15655A5000B82E26 /* QdesktopTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QdesktopTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5E225E15655A5000B82E26 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4B5E226515655A5000B82E26 /* QdesktopTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QdesktopTests-Info.plist"; sourceTree = "<group>"; };
+		4B5E226715655A5000B82E26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B5E226915655A5000B82E26 /* QdesktopTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdesktopTests.h; sourceTree = "<group>"; };
+		4B5E226A15655A5000B82E26 /* QdesktopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdesktopTests.m; sourceTree = "<group>"; };
+		4B5E227415655AAA00B82E26 /* QDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDWindow.h; sourceTree = "<group>"; };
+		4B5E227515655AAA00B82E26 /* QDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDWindow.m; sourceTree = "<group>"; };
+		4B5E227615655AAA00B82E26 /* WebView+QDZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+QDZoom.h"; sourceTree = "<group>"; };
+		4B5E227915655BFA00B82E26 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = ../../../../../System/Library/Frameworks/WebKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B5E223915655A5000B82E26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5E224115655A5000B82E26 /* Cocoa.framework in Frameworks */,
+				4B5E227A15655BFA00B82E26 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5E225915655A5000B82E26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5E225F15655A5000B82E26 /* SenTestingKit.framework in Frameworks */,
+				4B5E226015655A5000B82E26 /* Cocoa.framework in Frameworks */,
+				4B5E227B15655BFA00B82E26 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B5E223115655A4F00B82E26 = {
+			isa = PBXGroup;
+			children = (
+				4B5E224615655A5000B82E26 /* Qdesktop */,
+				4B5E226315655A5000B82E26 /* QdesktopTests */,
+				4B5E223F15655A5000B82E26 /* Frameworks */,
+				4B5E223D15655A5000B82E26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B5E223D15655A5000B82E26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B5E223C15655A5000B82E26 /* Qdesktop.app */,
+				4B5E225D15655A5000B82E26 /* QdesktopTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B5E223F15655A5000B82E26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B5E227915655BFA00B82E26 /* WebKit.framework */,
+				4B5E224015655A5000B82E26 /* Cocoa.framework */,
+				4B5E225E15655A5000B82E26 /* SenTestingKit.framework */,
+				4B5E224215655A5000B82E26 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B5E224215655A5000B82E26 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B5E224315655A5000B82E26 /* AppKit.framework */,
+				4B5E224415655A5000B82E26 /* CoreData.framework */,
+				4B5E224515655A5000B82E26 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4B5E224615655A5000B82E26 /* Qdesktop */ = {
+			isa = PBXGroup;
+			children = (
+				4B5E227615655AAA00B82E26 /* WebView+QDZoom.h */,
+				4B5E227415655AAA00B82E26 /* QDWindow.h */,
+				4B5E227515655AAA00B82E26 /* QDWindow.m */,
+				4B5E225215655A5000B82E26 /* QDAppDelegate.h */,
+				4B5E225315655A5000B82E26 /* QDAppDelegate.m */,
+				4B5E225515655A5000B82E26 /* MainMenu.xib */,
+				4B5E224715655A5000B82E26 /* Supporting Files */,
+			);
+			path = Qdesktop;
+			sourceTree = "<group>";
+		};
+		4B5E224715655A5000B82E26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B5E224815655A5000B82E26 /* Qdesktop-Info.plist */,
+				4B5E224915655A5000B82E26 /* InfoPlist.strings */,
+				4B5E224C15655A5000B82E26 /* main.m */,
+				4B5E224E15655A5000B82E26 /* Qdesktop-Prefix.pch */,
+				4B5E224F15655A5000B82E26 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B5E226315655A5000B82E26 /* QdesktopTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B5E226915655A5000B82E26 /* QdesktopTests.h */,
+				4B5E226A15655A5000B82E26 /* QdesktopTests.m */,
+				4B5E226415655A5000B82E26 /* Supporting Files */,
+			);
+			path = QdesktopTests;
+			sourceTree = "<group>";
+		};
+		4B5E226415655A5000B82E26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B5E226515655A5000B82E26 /* QdesktopTests-Info.plist */,
+				4B5E226615655A5000B82E26 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B5E223B15655A5000B82E26 /* Qdesktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B5E226E15655A5000B82E26 /* Build configuration list for PBXNativeTarget "Qdesktop" */;
+			buildPhases = (
+				4B5E223815655A5000B82E26 /* Sources */,
+				4B5E223915655A5000B82E26 /* Frameworks */,
+				4B5E223A15655A5000B82E26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Qdesktop;
+			productName = Qdesktop;
+			productReference = 4B5E223C15655A5000B82E26 /* Qdesktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B5E225C15655A5000B82E26 /* QdesktopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B5E227115655A5000B82E26 /* Build configuration list for PBXNativeTarget "QdesktopTests" */;
+			buildPhases = (
+				4B5E225815655A5000B82E26 /* Sources */,
+				4B5E225915655A5000B82E26 /* Frameworks */,
+				4B5E225A15655A5000B82E26 /* Resources */,
+				4B5E225B15655A5000B82E26 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B5E226215655A5000B82E26 /* PBXTargetDependency */,
+			);
+			name = QdesktopTests;
+			productName = QdesktopTests;
+			productReference = 4B5E225D15655A5000B82E26 /* QdesktopTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B5E223315655A4F00B82E26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QD;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 4B5E223615655A4F00B82E26 /* Build configuration list for PBXProject "Qdesktop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B5E223115655A4F00B82E26;
+			productRefGroup = 4B5E223D15655A5000B82E26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B5E223B15655A5000B82E26 /* Qdesktop */,
+				4B5E225C15655A5000B82E26 /* QdesktopTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B5E223A15655A5000B82E26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5E224B15655A5000B82E26 /* InfoPlist.strings in Resources */,
+				4B5E225115655A5000B82E26 /* Credits.rtf in Resources */,
+				4B5E225715655A5000B82E26 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5E225A15655A5000B82E26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5E226815655A5000B82E26 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B5E225B15655A5000B82E26 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B5E223815655A5000B82E26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5E224D15655A5000B82E26 /* main.m in Sources */,
+				4B5E225415655A5000B82E26 /* QDAppDelegate.m in Sources */,
+				4B5E227715655AAA00B82E26 /* QDWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5E225815655A5000B82E26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5E226B15655A5000B82E26 /* QdesktopTests.m in Sources */,
+				4B5E227815655AAA00B82E26 /* QDWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B5E226215655A5000B82E26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B5E223B15655A5000B82E26 /* Qdesktop */;
+			targetProxy = 4B5E226115655A5000B82E26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B5E224915655A5000B82E26 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B5E224A15655A5000B82E26 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B5E224F15655A5000B82E26 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B5E225015655A5000B82E26 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4B5E225515655A5000B82E26 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B5E225615655A5000B82E26 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4B5E226615655A5000B82E26 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B5E226715655A5000B82E26 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B5E226C15655A5000B82E26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4B5E226D15655A5000B82E26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4B5E226F15655A5000B82E26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Qdesktop/Qdesktop-Prefix.pch";
+				INFOPLIST_FILE = "Qdesktop/Qdesktop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B5E227015655A5000B82E26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Qdesktop/Qdesktop-Prefix.pch";
+				INFOPLIST_FILE = "Qdesktop/Qdesktop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4B5E227215655A5000B82E26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Qdesktop.app/Contents/MacOS/Qdesktop";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Qdesktop/Qdesktop-Prefix.pch";
+				INFOPLIST_FILE = "QdesktopTests/QdesktopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4B5E227315655A5000B82E26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Qdesktop.app/Contents/MacOS/Qdesktop";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Qdesktop/Qdesktop-Prefix.pch";
+				INFOPLIST_FILE = "QdesktopTests/QdesktopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B5E223615655A4F00B82E26 /* Build configuration list for PBXProject "Qdesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5E226C15655A5000B82E26 /* Debug */,
+				4B5E226D15655A5000B82E26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B5E226E15655A5000B82E26 /* Build configuration list for PBXNativeTarget "Qdesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5E226F15655A5000B82E26 /* Debug */,
+				4B5E227015655A5000B82E26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4B5E227115655A5000B82E26 /* Build configuration list for PBXNativeTarget "QdesktopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5E227215655A5000B82E26 /* Debug */,
+				4B5E227315655A5000B82E26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B5E223315655A4F00B82E26 /* Project object */;
+}

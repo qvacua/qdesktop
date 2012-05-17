@@ -1,14 +1,14 @@
-#import "WDAppDelegate.h"
-#import "WDWindow.h"
-#import "WebView+WDZoom.h"
+#import "QDAppDelegate.h"
+#import "QDWindow.h"
+#import "WebView+QDZoom.h"
 
 static NSString *const DEFAULT_URL = @"url";
 
-@interface WDAppDelegate ()
+@interface QDAppDelegate ()
 - (void)activateStatusMenu;
 @end
 
-@implementation WDAppDelegate {
+@implementation QDAppDelegate {
     NSStatusItem *_statusItem;
 }
 

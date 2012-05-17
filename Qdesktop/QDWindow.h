@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
 
-@interface WDWindow : NSWindow
+@interface QDWindow : NSWindow
 
 @property (assign, readonly, getter=isBackground) BOOL background;
 
