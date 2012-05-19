@@ -21,6 +21,7 @@
 		4B5E227815655AAA00B82E26 /* QDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E227515655AAA00B82E26 /* QDWindow.m */; };
 		4B5E227A15655BFA00B82E26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E227915655BFA00B82E26 /* WebKit.framework */; };
 		4B5E227B15655BFA00B82E26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E227915655BFA00B82E26 /* WebKit.framework */; };
+		4B9D82631566E61D0069AF88 /* Qdesktop.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4B9D82621566E61D0069AF88 /* Qdesktop.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4B5E227515655AAA00B82E26 /* QDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDWindow.m; sourceTree = "<group>"; };
 		4B5E227615655AAA00B82E26 /* WebView+QDZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+QDZoom.h"; sourceTree = "<group>"; };
 		4B5E227915655BFA00B82E26 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = ../../../../../System/Library/Frameworks/WebKit.framework; sourceTree = "<group>"; };
+		4B9D82621566E61D0069AF88 /* Qdesktop.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Qdesktop.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		4B5E224715655A5000B82E26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B9D82621566E61D0069AF88 /* Qdesktop.icns */,
 				4B5E224815655A5000B82E26 /* Qdesktop-Info.plist */,
 				4B5E224915655A5000B82E26 /* InfoPlist.strings */,
 				4B5E224C15655A5000B82E26 /* main.m */,
@@ -241,6 +244,7 @@
 				4B5E224B15655A5000B82E26 /* InfoPlist.strings in Resources */,
 				4B5E225115655A5000B82E26 /* Credits.rtf in Resources */,
 				4B5E225715655A5000B82E26 /* MainMenu.xib in Resources */,
+				4B9D82631566E61D0069AF88 /* Qdesktop.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +456,7 @@
 				4B5E227015655A5000B82E26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B5E227115655A5000B82E26 /* Build configuration list for PBXNativeTarget "QdesktopTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +465,7 @@
 				4B5E227315655A5000B82E26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
