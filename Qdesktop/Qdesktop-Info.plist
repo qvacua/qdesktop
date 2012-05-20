@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>Qdesktop.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.hataewon.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.qvacua.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
