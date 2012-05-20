@@ -1,8 +1,8 @@
 #import "QDWindow.h"
 
 @interface QDWindow ()
-- (NSSize)screenResolution;
 
+- (NSSize)screenResolution;
 - (void)fillScreen;
 
 @end
@@ -14,7 +14,10 @@
 @synthesize background = _background;
 
 - (NSSize)screenResolution {
-    return [[NSScreen mainScreen] frame].size;
+    NSSize size = [[NSScreen mainScreen] visibleFrame].size;
+    size.height += 4;   // to compensate the shadow of the menu bar
+
+    return size;
 }
 
 - (void)toggleDesktopBackground {
