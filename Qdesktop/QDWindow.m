@@ -4,6 +4,7 @@
 
 - (NSSize)screenResolution;
 - (void)fillScreen;
+- (void)handleScreenChange;
 
 @end
 
@@ -54,6 +55,8 @@
         [self setCollectionBehavior:(NSWindowCollectionBehaviorCanJoinAllSpaces | NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorIgnoresCycle)];
         [self fillScreen];
 #endif
+
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleScreenChange) name:NSApplicationDidChangeScreenParametersNotification object:nil];
     }
 
     return self;
@@ -69,6 +72,11 @@
 
 - (BOOL)canBecomeKeyWindow {
     return !self.background;
+}
+
+- (void)handleScreenChange {
+    [self setContentSize:[self screenResolution]];
+    [self setFrameOrigin:NSMakePoint(0, 0)];
 }
 
 @end
