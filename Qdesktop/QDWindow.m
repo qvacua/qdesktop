@@ -2,14 +2,11 @@
 
 @interface QDWindow ()
 
-- (NSSize)screenResolution;
-- (void)fillScreen;
-- (void)handleScreenChange;
+@property (readwrite) BOOL background;
 
 @end
 
 @implementation QDWindow {
-    BOOL _background;
 }
 
 @synthesize background = _background;
@@ -26,14 +23,14 @@
         [self setLevel:NSNormalWindowLevel];
         [self makeKeyAndOrderFront:self];
 
-        _background = NO;
+        self.background = NO;
         return;
     }
 
     [self setLevel:kCGDesktopWindowLevel];
     [self orderBack:self];
 
-    _background = YES;
+    self.background = YES;
 }
 
 - (void)fillScreen {

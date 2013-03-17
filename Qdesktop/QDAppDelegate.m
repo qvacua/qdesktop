@@ -2,11 +2,13 @@
 #import "QDWindow.h"
 #import "WebView+QDZoom.h"
 
-static NSString *const DEFAULT_URL_KEY = @"url";
-static NSString *const DEFAULT_URL_VALUE = @"http://www.hataewon.com";
+static NSString *const qDefaultUrlKey = @"url";
+static NSString *const qDefaultUrlValue = @"http://www.hataewon.com";
 
 @interface QDAppDelegate ()
-- (void)initStatusMenu;
+
+@property NSStatusItem *statusItem;
+
 @end
 
 @implementation QDAppDelegate {
@@ -18,29 +20,28 @@ static NSString *const DEFAULT_URL_VALUE = @"http://www.hataewon.com";
 @synthesize statusMenu = _statusMenu;
 @synthesize urlWindow = _urlWindow;
 @synthesize urlField = _urlField;
+@synthesize statusItem = _statusItem;
 
 - (void)initStatusMenu {
-    NSStatusBar *bar = [NSStatusBar systemStatusBar];
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 
-    _statusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-
-    [_statusItem setTitle:@"😎"];
-    [_statusItem setHighlightMode:YES];
-    [_statusItem setMenu:self.statusMenu];
+    [self.statusItem setTitle:@"😎"];
+    [self.statusItem setHighlightMode:YES];
+    [self.statusItem setMenu:self.statusMenu];
 }
 
 - (void)setDefaultsIfNecessary {
-    NSUserDefaults *const userDefaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 
-    if ([userDefaults objectForKey:DEFAULT_URL_KEY] == nil) {
-        [userDefaults setObject:DEFAULT_URL_VALUE forKey:DEFAULT_URL_KEY];
+    if ([userDefaults objectForKey:qDefaultUrlKey] == nil) {
+        [userDefaults setObject:qDefaultUrlValue forKey:qDefaultUrlKey];
     }
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self setDefaultsIfNecessary];
 
-    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:DEFAULT_URL_KEY];
+    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:qDefaultUrlKey];
 
     [self initStatusMenu];
 
@@ -85,24 +86,24 @@ static NSString *const DEFAULT_URL_VALUE = @"http://www.hataewon.com";
     NSURL *url = [NSURL URLWithString:string];
     [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
 
-    [[NSUserDefaults standardUserDefaults] setObject:string forKey:DEFAULT_URL_KEY];
+    [[NSUserDefaults standardUserDefaults] setObject:string forKey:qDefaultUrlKey];
 }
 
 - (IBAction)toggleBackground:(id)sender {
     [self.window toggleDesktopBackground];
-    [_webView.mainFrame.frameView setAllowsScrolling:!self.window.background];
+    [self.webView.mainFrame.frameView setAllowsScrolling:!self.window.background];
 }
 
 - (IBAction)zoomIn:(id)sender {
-    [_webView zoomPageIn:self];
+    [self.webView zoomPageIn:self];
 }
 
 - (IBAction)zoomToActualSize:(id)sender {
-    [_webView resetPageZoom:self];
+    [self.webView resetPageZoom:self];
 }
 
 - (IBAction)zoomOut:(id)sender {
-    [_webView zoomPageOut:self];
+    [self.webView zoomPageOut:self];
 }
 
 @end

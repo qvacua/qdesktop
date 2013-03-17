@@ -2,7 +2,7 @@
 
 @interface QDWindow : NSWindow
 
-@property (assign, readonly, getter=isBackground) BOOL background;
+@property (readonly, getter=isBackground) BOOL background;
 
 - (void)toggleDesktopBackground;
 
