@@ -16,7 +16,6 @@
 		4B5E225F15655A5000B82E26 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E225E15655A5000B82E26 /* SenTestingKit.framework */; };
 		4B5E226015655A5000B82E26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E224015655A5000B82E26 /* Cocoa.framework */; };
 		4B5E226815655A5000B82E26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E226615655A5000B82E26 /* InfoPlist.strings */; };
-		4B5E226B15655A5000B82E26 /* QDWindowControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E226A15655A5000B82E26 /* QDWindowControllerTest.m */; };
 		4B5E227715655AAA00B82E26 /* QDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E227515655AAA00B82E26 /* QDWindow.m */; };
 		4B5E227815655AAA00B82E26 /* QDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E227515655AAA00B82E26 /* QDWindow.m */; };
 		4B5E227A15655BFA00B82E26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E227915655BFA00B82E26 /* WebKit.framework */; };
@@ -57,7 +56,6 @@
 		4B5E225E15655A5000B82E26 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4B5E226515655A5000B82E26 /* QdesktopTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QdesktopTests-Info.plist"; sourceTree = "<group>"; };
 		4B5E226715655A5000B82E26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4B5E226A15655A5000B82E26 /* QDWindowControllerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDWindowControllerTest.m; sourceTree = "<group>"; };
 		4B5E227415655AAA00B82E26 /* QDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDWindow.h; sourceTree = "<group>"; };
 		4B5E227515655AAA00B82E26 /* QDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDWindow.m; sourceTree = "<group>"; };
 		4B5E227615655AAA00B82E26 /* WebView+QDZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+QDZoom.h"; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 		4B5E226315655A5000B82E26 /* QdesktopTests */ = {
 			isa = PBXGroup;
 			children = (
-				4B5E226A15655A5000B82E26 /* QDWindowControllerTest.m */,
 				4B5E226415655A5000B82E26 /* Supporting Files */,
 				4BAA2C9D156FD480003749F1 /* Test Support */,
 			);
@@ -318,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5E226B15655A5000B82E26 /* QDWindowControllerTest.m in Sources */,
 				4B5E227815655AAA00B82E26 /* QDWindow.m in Sources */,
 				4BAA2C9D156FD480003749EC /* QDBaseTest.m in Sources */,
 				4BAA2C9D156FD480003749F0 /* NSObject+Reflection.m in Sources */,

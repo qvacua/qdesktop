@@ -5,13 +5,16 @@
 
 @interface QDAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSMenu *statusMenu;
-@property (assign) IBOutlet QDWindow *window;
-@property (assign) IBOutlet WebView *webView;
-@property (assign) IBOutlet NSWindow *urlWindow;
-@property (assign) IBOutlet NSTextField *urlField;
+@property (weak) IBOutlet NSMenu *statusMenu;
+@property (weak) IBOutlet QDWindow *window;
+@property (weak) IBOutlet WebView *webView;
+@property (weak) IBOutlet NSWindow *urlWindow;
+@property (weak) IBOutlet NSTextField *urlField;
+@property (weak) IBOutlet NSTextField *intervalTextField;
+@property (weak) IBOutlet NSButton *regularReloadCheckbox;
 
 - (IBAction)toggleBackground:(id)sender;
+- (IBAction)toggleRegularReload:(id)sender;
 
 - (IBAction)zoomIn:(id)sender;
 - (IBAction)zoomToActualSize:(id)sender;

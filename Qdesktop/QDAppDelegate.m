@@ -3,7 +3,7 @@
 #import "WebView+QDZoom.h"
 
 static NSString *const qDefaultUrlKey = @"url";
-static NSString *const qDefaultUrlValue = @"http://www.hataewon.com";
+static NSString *const qDefaultUrlValue = @"http://www.qvacua.com";
 
 @interface QDAppDelegate ()
 
@@ -12,7 +12,6 @@ static NSString *const qDefaultUrlValue = @"http://www.hataewon.com";
 @end
 
 @implementation QDAppDelegate {
-    NSStatusItem *_statusItem;
 }
 
 @synthesize window = _window;
@@ -87,6 +86,9 @@ static NSString *const qDefaultUrlValue = @"http://www.hataewon.com";
     [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
 
     [[NSUserDefaults standardUserDefaults] setObject:string forKey:qDefaultUrlKey];
+}
+
+- (IBAction)toggleRegularReload:(id)sender {
 }
 
 - (IBAction)toggleBackground:(id)sender {
