@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B07889116FF032E00B439F9 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B07888F16FF032E00B439F9 /* OCHamcrest.framework */; };
+		4B07889216FF032E00B439F9 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B07889016FF032E00B439F9 /* OCMockito.framework */; };
 		4B5E224115655A5000B82E26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E224015655A5000B82E26 /* Cocoa.framework */; };
 		4B5E224B15655A5000B82E26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5E224915655A5000B82E26 /* InfoPlist.strings */; };
 		4B5E224D15655A5000B82E26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E224C15655A5000B82E26 /* main.m */; };
@@ -23,8 +25,6 @@
 		4B9D82631566E61D0069AF88 /* Qdesktop.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4B9D82621566E61D0069AF88 /* Qdesktop.icns */; };
 		4BAA2C9D156FD480003749EC /* QDBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA2C9D156FD480003749EB /* QDBaseTest.m */; };
 		4BAA2C9D156FD480003749F0 /* NSObject+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA2C9D156FD480003749EF /* NSObject+Reflection.m */; };
-		4BAA2CBE156FDAC1003749EA /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAA2C9D156FD480003749F4 /* OCHamcrest.framework */; };
-		4BAA2CC0156FDAC4003749EA /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAA2C9D156FD480003749F2 /* OCMockito.framework */; };
 		4BAA2CC0156FDAC4003749ED /* ArgumentCaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA2CC0156FDAC4003749EC /* ArgumentCaptor.m */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B07888F16FF032E00B439F9 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../../../../Library/Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
+		4B07889016FF032E00B439F9 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = ../../../../Library/Frameworks/OCMockito.framework; sourceTree = "<group>"; };
 		4B5E223C15655A5000B82E26 /* Qdesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qdesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5E224015655A5000B82E26 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		4B5E224315655A5000B82E26 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		4B5E224415655A5000B82E26 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		4B5E224515655A5000B82E26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B5E224815655A5000B82E26 /* Qdesktop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Qdesktop-Info.plist"; sourceTree = "<group>"; };
 		4B5E224A15655A5000B82E26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B5E224C15655A5000B82E26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,14 +58,12 @@
 		4B5E227415655AAA00B82E26 /* QDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDWindow.h; sourceTree = "<group>"; };
 		4B5E227515655AAA00B82E26 /* QDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDWindow.m; sourceTree = "<group>"; };
 		4B5E227615655AAA00B82E26 /* WebView+QDZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+QDZoom.h"; sourceTree = "<group>"; };
-		4B5E227915655BFA00B82E26 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = ../../../../../System/Library/Frameworks/WebKit.framework; sourceTree = "<group>"; };
+		4B5E227915655BFA00B82E26 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		4B9D82621566E61D0069AF88 /* Qdesktop.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Qdesktop.icns; sourceTree = "<group>"; };
 		4BAA2C9D156FD480003749EB /* QDBaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDBaseTest.m; sourceTree = "<group>"; };
 		4BAA2C9D156FD480003749ED /* QDBaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDBaseTest.h; sourceTree = "<group>"; };
 		4BAA2C9D156FD480003749EE /* NSObject+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Reflection.h"; sourceTree = "<group>"; };
 		4BAA2C9D156FD480003749EF /* NSObject+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Reflection.m"; sourceTree = "<group>"; };
-		4BAA2C9D156FD480003749F2 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = Library/Frameworks/OCMockito.framework; sourceTree = SDKROOT; };
-		4BAA2C9D156FD480003749F4 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Library/Frameworks/OCHamcrest.framework; sourceTree = SDKROOT; };
 		4BAA2CC0156FDAC4003749EB /* ArgumentCaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgumentCaptor.h; sourceTree = "<group>"; };
 		4BAA2CC0156FDAC4003749EC /* ArgumentCaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgumentCaptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,8 +85,8 @@
 				4B5E225F15655A5000B82E26 /* SenTestingKit.framework in Frameworks */,
 				4B5E226015655A5000B82E26 /* Cocoa.framework in Frameworks */,
 				4B5E227B15655BFA00B82E26 /* WebKit.framework in Frameworks */,
-				4BAA2CBE156FDAC1003749EA /* OCHamcrest.framework in Frameworks */,
-				4BAA2CC0156FDAC4003749EA /* OCMockito.framework in Frameworks */,
+				4B07889116FF032E00B439F9 /* OCHamcrest.framework in Frameworks */,
+				4B07889216FF032E00B439F9 /* OCMockito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,24 +115,13 @@
 		4B5E223F15655A5000B82E26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4BAA2C9D156FD480003749F4 /* OCHamcrest.framework */,
-				4BAA2C9D156FD480003749F2 /* OCMockito.framework */,
+				4B07888F16FF032E00B439F9 /* OCHamcrest.framework */,
+				4B07889016FF032E00B439F9 /* OCMockito.framework */,
 				4B5E227915655BFA00B82E26 /* WebKit.framework */,
 				4B5E224015655A5000B82E26 /* Cocoa.framework */,
 				4B5E225E15655A5000B82E26 /* SenTestingKit.framework */,
-				4B5E224215655A5000B82E26 /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4B5E224215655A5000B82E26 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B5E224315655A5000B82E26 /* AppKit.framework */,
-				4B5E224415655A5000B82E26 /* CoreData.framework */,
-				4B5E224515655A5000B82E26 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		4B5E224615655A5000B82E26 /* Qdesktop */ = {
@@ -441,7 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Qdesktop.app/Contents/MacOS/Qdesktop";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					/Library/Frameworks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Qdesktop/Qdesktop-Prefix.pch";
 				INFOPLIST_FILE = "QdesktopTests/QdesktopTests-Info.plist";
@@ -455,7 +444,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Qdesktop.app/Contents/MacOS/Qdesktop";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					/Library/Frameworks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Qdesktop/Qdesktop-Prefix.pch";
 				INFOPLIST_FILE = "QdesktopTests/QdesktopTests-Info.plist";

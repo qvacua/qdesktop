@@ -1,3 +1,11 @@
+/**
+ * Tae Won Ha
+ * http://qvacua.com
+ * https://github.com/qvacua
+ *
+ * See LICENSE
+ */
+
 #import <OCHamcrest/HCBaseMatcher.h>
 #import <objc/objc-api.h>
 
