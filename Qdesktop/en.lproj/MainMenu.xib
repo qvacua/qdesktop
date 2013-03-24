@@ -1225,7 +1225,7 @@
 											<string key="NS.identifier"/>
 										</object>
 										<integer value="2880" key="maximum"/>
-										<real value="0.0" key="minimum"/>
+										<real value="1" key="minimum"/>
 										<string key="negativeInfinitySymbol">-∞</string>
 										<string key="nilSymbol"/>
 										<integer value="1" key="numberStyle"/>
@@ -1243,7 +1243,7 @@
 										<string key="NSString">NaN</string>
 										<dictionary key="NSAttributes"/>
 									</object>
-									<real value="0.0" key="NS.min"/>
+									<real value="1" key="NS.min"/>
 									<integer value="2880" key="NS.max"/>
 									<object class="NSDecimalNumberHandler" key="NS.rounding">
 										<int key="NS.roundingmode">3</int>
@@ -1690,7 +1690,7 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">loadUrl:</string>
+						<string key="label">prefsWindowOk:</string>
 						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="661914480"/>
 					</object>

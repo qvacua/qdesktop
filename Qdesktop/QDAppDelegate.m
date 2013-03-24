@@ -45,7 +45,7 @@ static const int qDefaultIntervalValue = 15;
     const SEL action = [anItem action];
 
     if (action == @selector(toggleBackground:)
-            || action == @selector(loadUrl:)
+            || action == @selector(prefsWindowOk:)
             || action == @selector(openPrefsWindow:)
             || action == @selector(zoomIn:)
             || action == @selector(zoomToActualSize:)
@@ -62,21 +62,20 @@ static const int qDefaultIntervalValue = 15;
     NSApplication *const application = [NSApplication sharedApplication];
     [application activateIgnoringOtherApps:YES];
 
-    [self.urlField setStringValue:[self.webView mainFrameURL]];
+    [self syncPrefsUiElements];
+
     [self.urlWindow makeKeyAndOrderFront:self];
     [self.urlWindow orderFront:self];
 
     [application deactivate];
 }
 
-- (IBAction)loadUrl:(id)sender {
+- (IBAction)prefsWindowOk:(id)sender {
     [self.urlWindow orderOut:self];
 
-    NSString *const string = [self.urlField stringValue];
-    NSURL *url = [NSURL URLWithString:string];
-    [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
+    [self storeNewDefaults];
 
-    [[NSUserDefaults standardUserDefaults] setObject:string forKey:qDefaultUrlKey];
+    [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:self.url]];
 }
 
 - (IBAction)toggleRegularReload:(id)sender {
@@ -138,13 +137,29 @@ static const int qDefaultIntervalValue = 15;
     self.url = [NSURL URLWithString:[self.userDefaults objectForKey:qDefaultUrlKey]];
     self.reloadRegularly = [self.userDefaults boolForKey:qDefaultReloadRegularlyKey];
     self.interval = [self.userDefaults integerForKey:qDefaultIntervalKey];
+}
 
+- (void)storeNewDefaults {
+    self.url = [NSURL URLWithString:[self.urlField stringValue]];
+    [self.userDefaults setObject:self.url.absoluteString forKey:qDefaultUrlKey];
+
+    self.reloadRegularly = NO;
+    if (self.regularReloadCheckbox.state == NSOnState) {
+        self.reloadRegularly = YES;
+    }
+    [self.userDefaults setBool:self.reloadRegularly forKey:qDefaultReloadRegularlyKey];
+
+    self.interval = self.intervalTextField.integerValue;
+    [self.userDefaults setInteger:self.interval forKey:qDefaultIntervalKey];
+}
+
+- (void)syncPrefsUiElements {
+    [self.urlField setStringValue:self.url.absoluteString];
     [self.regularReloadCheckbox setState:NSOffState];
-    [self.intervalTextField setIntegerValue:self.interval];
-
     if (self.reloadRegularly) {
         [self.regularReloadCheckbox setState:NSOnState];
     }
+    [self.intervalTextField setIntegerValue:self.interval];
 }
 
 @end

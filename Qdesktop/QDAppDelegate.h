@@ -29,6 +29,6 @@
 - (IBAction)zoomOut:(id)sender;
 
 - (IBAction)openPrefsWindow:(id)sender;
-- (IBAction)loadUrl:(id)sender;
+- (IBAction)prefsWindowOk:(id)sender;
 
 @end
