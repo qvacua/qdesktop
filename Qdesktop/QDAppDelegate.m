@@ -23,6 +23,7 @@ static const int qDefaultIntervalValue = 15;
 @property NSURL *url;
 @property BOOL reloadRegularly;
 @property NSInteger interval;
+@property NSTimer *timer;
 
 @end
 
@@ -39,6 +40,7 @@ static const int qDefaultIntervalValue = 15;
 @synthesize url = _url;
 @synthesize reloadRegularly = _reloadRegularly;
 @synthesize interval = _interval;
+@synthesize timer = _timer;
 
 #pragma mark NSUserInterfaceValidations
 - (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)anItem {
@@ -49,8 +51,7 @@ static const int qDefaultIntervalValue = 15;
             || action == @selector(openPrefsWindow:)
             || action == @selector(zoomIn:)
             || action == @selector(zoomToActualSize:)
-            || action == @selector(zoomOut:))
-    {
+            || action == @selector(zoomOut:)) {
         return YES;
     }
 
@@ -75,7 +76,8 @@ static const int qDefaultIntervalValue = 15;
 
     [self storeNewDefaults];
 
-    [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:self.url]];
+    [self updateWebView];
+    [self resetTimer];
 }
 
 - (IBAction)toggleRegularReload:(id)sender {
@@ -106,8 +108,9 @@ static const int qDefaultIntervalValue = 15;
     [self readDefaults];
 
     [self initStatusMenu];
+    [self updateWebView];
 
-    [[self.webView mainFrame] loadRequest:[NSURLRequest requestWithURL:self.url]];
+    [self resetTimer];
 
 #ifndef DEBUG
     [self toggleBackground:self];
@@ -115,6 +118,12 @@ static const int qDefaultIntervalValue = 15;
 }
 
 #pragma mark Private
+- (void)updateWebView {
+    [self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:self.url]];
+
+    NSLog(@"updated webview with %@", self.url);
+}
+
 - (void)initStatusMenu {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 
@@ -160,6 +169,24 @@ static const int qDefaultIntervalValue = 15;
         [self.regularReloadCheckbox setState:NSOnState];
     }
     [self.intervalTextField setIntegerValue:self.interval];
+}
+
+- (void)resetTimer {
+    [self.timer invalidate];
+    self.timer = nil;
+
+    if (!self.reloadRegularly) {
+        return;
+    }
+
+    self.timer = [NSTimer timerWithTimeInterval:(self.interval * 60) target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
+
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    [runLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
+}
+
+- (void)timerFireMethod:(NSTimer *)theTimer {
+    [self updateWebView];
 }
 
 @end
