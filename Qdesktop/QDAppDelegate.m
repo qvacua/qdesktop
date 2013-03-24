@@ -11,7 +11,7 @@
 #import "WebView+QDZoom.h"
 
 static NSString *const qDefaultUrlKey = @"url";
-static NSString *const qDefaultUrlValue = @"http://www.hataewon.com";
+static NSString *const qDefaultUrlValue = @"http://qvacua.com";
 static NSString *const qDefaultReloadRegularlyKey = @"update-regularly";
 static NSString *const qDefaultIntervalKey = @"interval";
 static const int qDefaultIntervalValue = 15;
