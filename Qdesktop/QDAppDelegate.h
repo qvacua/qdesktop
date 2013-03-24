@@ -11,7 +11,7 @@
 
 @class QDWindow;
 
-@interface QDAppDelegate : NSObject <NSApplicationDelegate>
+@interface QDAppDelegate : NSObject <NSApplicationDelegate, NSUserInterfaceValidations>
 
 @property (weak) IBOutlet NSMenu *statusMenu;
 @property (weak) IBOutlet QDWindow *window;
@@ -28,7 +28,7 @@
 - (IBAction)zoomToActualSize:(id)sender;
 - (IBAction)zoomOut:(id)sender;
 
-- (IBAction)openLoadUrlWindow:(id)sender;
+- (IBAction)openPrefsWindow:(id)sender;
 - (IBAction)loadUrl:(id)sender;
 
 @end
