@@ -121,9 +121,7 @@ static const int qDefaultIntervalValue = 15;
 - (void)updateWebView {
     [self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:self.url]];
 
-#ifdef DEBUG
     NSLog(@"updated webview with %@", self.url);
-#endif
 }
 
 - (void)initStatusMenu {
