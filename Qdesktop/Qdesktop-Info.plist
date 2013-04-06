@@ -34,5 +34,9 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+    <key>SUFeedURL</key>
+    <string>http://qvacua.com/qdesktop/appcast.xml</string>
+    <key>SUPublicDSAKeyFile</key>
+    <string>sparkle-pub.pem</string>
 </dict>
 </plist>

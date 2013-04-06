@@ -17,8 +17,6 @@
 @implementation QDWindow {
 }
 
-@synthesize background = _background;
-
 - (NSSize)screenResolution {
     NSSize mainScreenSize = [[NSScreen mainScreen] frame].size;
     CGFloat menuBarThickness = [[NSStatusBar systemStatusBar] thickness];

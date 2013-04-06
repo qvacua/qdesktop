@@ -30,18 +30,6 @@ static const int qDefaultIntervalValue = 15;
 @implementation QDAppDelegate {
 }
 
-@synthesize window = _window;
-@synthesize webView = _webView;
-@synthesize statusMenu = _statusMenu;
-@synthesize urlWindow = _urlWindow;
-@synthesize urlField = _urlField;
-@synthesize statusItem = _statusItem;
-@synthesize userDefaults = _userDefaults;
-@synthesize url = _url;
-@synthesize reloadRegularly = _reloadRegularly;
-@synthesize interval = _interval;
-@synthesize timer = _timer;
-
 #pragma mark NSUserInterfaceValidations
 - (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)anItem {
     const SEL action = [anItem action];

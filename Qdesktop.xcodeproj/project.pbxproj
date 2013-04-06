@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1929B5C8D059B5CDA88CF133 /* sparkle-pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 1929B8E1B77A0805401D5BED /* sparkle-pub.pem */; };
 		4B07889116FF032E00B439F9 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B07888F16FF032E00B439F9 /* OCHamcrest.framework */; };
 		4B07889216FF032E00B439F9 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B07889016FF032E00B439F9 /* OCMockito.framework */; };
 		4B5E224115655A5000B82E26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5E224015655A5000B82E26 /* Cocoa.framework */; };
@@ -26,6 +27,8 @@
 		4BAA2C9D156FD480003749EC /* QDBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA2C9D156FD480003749EB /* QDBaseTest.m */; };
 		4BAA2C9D156FD480003749F0 /* NSObject+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA2C9D156FD480003749EF /* NSObject+Reflection.m */; };
 		4BAA2CC0156FDAC4003749ED /* ArgumentCaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA2CC0156FDAC4003749EC /* ArgumentCaptor.m */; };
+		4BB05F9817104AFD00977D55 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB05F9717104AFD00977D55 /* Sparkle.framework */; };
+		4BB05F9A17104B1E00977D55 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BB05F9717104AFD00977D55 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4BB05F9917104B1300977D55 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4BB05F9A17104B1E00977D55 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1929B8E1B77A0805401D5BED /* sparkle-pub.pem */ = {isa = PBXFileReference; lastKnownFileType = file.pem; path = "sparkle-pub.pem"; sourceTree = "<group>"; };
 		4B07888F16FF032E00B439F9 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../../../../Library/Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
 		4B07889016FF032E00B439F9 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = ../../../../Library/Frameworks/OCMockito.framework; sourceTree = "<group>"; };
 		4B5E223C15655A5000B82E26 /* Qdesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qdesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +83,7 @@
 		4BAA2C9D156FD480003749EF /* NSObject+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Reflection.m"; sourceTree = "<group>"; };
 		4BAA2CC0156FDAC4003749EB /* ArgumentCaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgumentCaptor.h; sourceTree = "<group>"; };
 		4BAA2CC0156FDAC4003749EC /* ArgumentCaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgumentCaptor.m; sourceTree = "<group>"; };
+		4BB05F9717104AFD00977D55 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +93,7 @@
 			files = (
 				4B5E224115655A5000B82E26 /* Cocoa.framework in Frameworks */,
 				4B5E227A15655BFA00B82E26 /* WebKit.framework in Frameworks */,
+				4BB05F9817104AFD00977D55 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +134,7 @@
 		4B5E223F15655A5000B82E26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BB05F9717104AFD00977D55 /* Sparkle.framework */,
 				4B07888F16FF032E00B439F9 /* OCHamcrest.framework */,
 				4B07889016FF032E00B439F9 /* OCMockito.framework */,
 				4B5E227915655BFA00B82E26 /* WebKit.framework */,
@@ -147,6 +167,7 @@
 				4B5E224C15655A5000B82E26 /* main.m */,
 				4B5E224E15655A5000B82E26 /* Qdesktop-Prefix.pch */,
 				4B5E224F15655A5000B82E26 /* Credits.rtf */,
+				1929B8E1B77A0805401D5BED /* sparkle-pub.pem */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +213,7 @@
 				4B5E223815655A5000B82E26 /* Sources */,
 				4B5E223915655A5000B82E26 /* Frameworks */,
 				4B5E223A15655A5000B82E26 /* Resources */,
+				4BB05F9917104B1300977D55 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -257,6 +279,7 @@
 				4B5E225115655A5000B82E26 /* Credits.rtf in Resources */,
 				4B5E225715655A5000B82E26 /* MainMenu.xib in Resources */,
 				4B9D82631566E61D0069AF88 /* Qdesktop.icns in Resources */,
+				1929B5C8D059B5CDA88CF133 /* sparkle-pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +427,10 @@
 		4B5E226F15655A5000B82E26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Qdesktop/Qdesktop-Prefix.pch";
 				INFOPLIST_FILE = "Qdesktop/Qdesktop-Info.plist";
@@ -415,6 +442,10 @@
 		4B5E227015655A5000B82E26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Qdesktop/Qdesktop-Prefix.pch";
 				INFOPLIST_FILE = "Qdesktop/Qdesktop-Info.plist";
