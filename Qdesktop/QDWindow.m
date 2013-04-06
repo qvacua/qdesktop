@@ -20,10 +20,12 @@
 @synthesize background = _background;
 
 - (NSSize)screenResolution {
-    NSSize size = [[NSScreen mainScreen] visibleFrame].size;
-    size.height += 4;   // to compensate the shadow of the menu bar
+    NSSize mainScreenSize = [[NSScreen mainScreen] frame].size;
+    CGFloat menuBarThickness = [[NSStatusBar systemStatusBar] thickness];
 
-    return size;
+    mainScreenSize.height -= menuBarThickness;
+
+    return mainScreenSize;
 }
 
 - (void)toggleDesktopBackground {
