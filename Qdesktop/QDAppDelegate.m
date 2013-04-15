@@ -96,6 +96,8 @@ static const int qDefaultIntervalValue = 15;
     [self readDefaults];
 
     [self initStatusMenu];
+
+    [self setDefaultFontSize];
     [self updateWebView];
 
     [self resetTimer];
@@ -106,6 +108,12 @@ static const int qDefaultIntervalValue = 15;
 }
 
 #pragma mark Private
+- (void)setDefaultFontSize {
+    [self.webView.preferences setDefaultFontSize:16];
+    [self.webView.preferences setDefaultFixedFontSize:16];
+    [self.webView.preferences setMinimumFontSize:9];
+}
+
 - (void)updateWebView {
     [self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:self.url]];
 

@@ -862,12 +862,13 @@
 							<object class="WebPreferences" key="Preferences">
 								<string key="Identifier"/>
 								<dictionary class="NSMutableDictionary" key="Values">
-									<integer value="12" key="WebKitDefaultFixedFontSize"/>
-									<integer value="12" key="WebKitDefaultFontSize"/>
-									<integer value="1" key="WebKitMinimumFontSize"/>
+									<integer value="16" key="WebKitDefaultFixedFontSize"/>
+									<integer value="16" key="WebKitDefaultFontSize"/>
+									<boolean value="NO" key="WebKitJavaScriptCanOpenWindowsAutomatically"/>
+									<integer value="9" key="WebKitMinimumFontSize"/>
 								</dictionary>
 							</object>
-							<bool key="UseBackForwardList">YES</bool>
+							<bool key="UseBackForwardList">NO</bool>
 							<bool key="AllowsUndo">YES</bool>
 						</object>
 					</array>
