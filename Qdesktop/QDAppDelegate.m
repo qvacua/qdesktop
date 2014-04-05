@@ -69,6 +69,7 @@ static const int qDefaultIntervalValue = 15;
 }
 
 - (IBAction)toggleRegularReload:(id)sender {
+    // noop: the timer is reset in -prefsWindowOk:
 }
 
 - (IBAction)toggleBackground:(id)sender {
