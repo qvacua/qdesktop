@@ -21,6 +21,7 @@
 @property (weak) IBOutlet NSTextField *urlField;
 @property (weak) IBOutlet NSTextField *intervalTextField;
 @property (weak) IBOutlet NSButton *regularReloadCheckbox;
+@property (weak) IBOutlet NSButton *interactWhenLaunchesCheckbox;
 
 #pragma mark IBActions
 - (IBAction)toggleBackground:(id)sender;

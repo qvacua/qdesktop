@@ -16,6 +16,8 @@ static NSString *const qDefaultUrlValue = @"http://qvacua.com";
 static NSString *const qDefaultReloadRegularlyKey = @"update-regularly";
 static NSString *const qDefaultIntervalKey = @"interval";
 static const int qDefaultIntervalValue = 15;
+static NSString *const qDefaultInteractWhenLaunchesKey = @"interact-when-launches";
+static const BOOL qDefaultInteractWhenLaunchesValue = NO;
 
 @interface QDAppDelegate ()
 
@@ -25,6 +27,7 @@ static const int qDefaultIntervalValue = 15;
 @property BOOL reloadRegularly;
 @property NSInteger interval;
 @property NSTimer *timer;
+@property BOOL interactWhenLaunches;
 
 @end
 
@@ -103,9 +106,9 @@ static const int qDefaultIntervalValue = 15;
 
     [self resetTimer];
 
-#ifndef DEBUG
-    [self toggleBackground:self];
-#endif
+    if (!self.interactWhenLaunches) {
+        [self toggleBackground:self];
+    }
 }
 
 #pragma mark Private
@@ -137,12 +140,17 @@ static const int qDefaultIntervalValue = 15;
     if ([self.userDefaults objectForKey:qDefaultIntervalKey] == nil) {
         [self.userDefaults setInteger:qDefaultIntervalValue forKey:qDefaultIntervalKey];
     }
+
+    if ([self.userDefaults objectForKey:qDefaultInteractWhenLaunchesKey] == nil) {
+        [self.userDefaults setBool:qDefaultInteractWhenLaunchesValue forKey:qDefaultInteractWhenLaunchesKey];
+    }
 }
 
 - (void)readDefaults {
     self.url = [NSURL URLWithString:[self.userDefaults objectForKey:qDefaultUrlKey]];
     self.reloadRegularly = [self.userDefaults boolForKey:qDefaultReloadRegularlyKey];
     self.interval = [self.userDefaults integerForKey:qDefaultIntervalKey];
+    self.interactWhenLaunches = [self.userDefaults boolForKey:qDefaultInteractWhenLaunchesKey];
 }
 
 - (void)storeNewDefaults {
@@ -157,6 +165,12 @@ static const int qDefaultIntervalValue = 15;
 
     self.interval = self.intervalTextField.integerValue;
     [self.userDefaults setInteger:self.interval forKey:qDefaultIntervalKey];
+
+    self.interactWhenLaunches = NO;
+    if (self.interactWhenLaunchesCheckbox.state == NSOnState) {
+        self.interactWhenLaunches = YES;
+    }
+    [self.userDefaults setBool:self.interactWhenLaunches forKey:qDefaultInteractWhenLaunchesKey];
 }
 
 - (void)syncPrefsUiElements {
@@ -168,6 +182,11 @@ static const int qDefaultIntervalValue = 15;
     }
 
     self.intervalTextField.integerValue = self.interval;
+
+    self.interactWhenLaunchesCheckbox.state = NSOffState;
+    if (self.interactWhenLaunches) {
+        self.interactWhenLaunchesCheckbox.state = NSOnState;
+    }
 }
 
 - (void)resetTimer {

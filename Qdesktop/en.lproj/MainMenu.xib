@@ -385,6 +385,7 @@
         </menu>
         <customObject id="494" customClass="QDAppDelegate">
             <connections>
+                <outlet property="interactWhenLaunchesCheckbox" destination="5uC-rY-o3C" id="JtP-lJ-uf2"/>
                 <outlet property="intervalTextField" destination="743" id="762"/>
                 <outlet property="regularReloadCheckbox" destination="644" id="741"/>
                 <outlet property="statusMenu" destination="557" id="569"/>
@@ -420,10 +421,22 @@
         </window>
         <menu id="557">
             <items>
-                <menuItem title="Toggle Background" id="568">
+                <menuItem title="Interact With Web Page" id="568">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="toggleBackground:" target="494" id="612"/>
+                        <binding destination="494" name="enabled" keyPath="self.window.background" id="dFf-0E-ABC"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Enter Background Mode" id="h3M-NP-mSF">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleBackground:" target="494" id="ajF-Ri-o4h"/>
+                        <binding destination="494" name="enabled" keyPath="self.window.background" id="sGo-4a-dA8">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="587"/>
@@ -483,16 +496,16 @@
         </menu>
         <window title="Load URL" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="592">
             <windowStyleMask key="styleMask" titled="YES" resizable="YES"/>
-            <rect key="contentRect" x="196" y="240" width="489" height="138"/>
+            <rect key="contentRect" x="196" y="240" width="489" height="161"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <value key="minSize" type="size" width="300" height="121"/>
             <value key="maxSize" type="size" width="1280" height="121"/>
             <view key="contentView" id="593">
-                <rect key="frame" x="0.0" y="0.0" width="489" height="138"/>
+                <rect key="frame" x="0.0" y="0.0" width="489" height="161"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="594">
-                        <rect key="frame" x="18" y="101" width="28" height="14"/>
+                        <rect key="frame" x="18" y="124" width="28" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="URL:" id="595">
                             <font key="font" metaFont="smallSystem"/>
@@ -501,7 +514,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="596">
-                        <rect key="frame" x="52" y="99" width="417" height="19"/>
+                        <rect key="frame" x="52" y="122" width="417" height="19"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="597">
                             <font key="font" metaFont="smallSystem"/>
@@ -544,7 +557,7 @@ Gw
                         </connections>
                     </button>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="644">
-                        <rect key="frame" x="49" y="72" width="135" height="18"/>
+                        <rect key="frame" x="49" y="95" width="135" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Reload the URL every" bezelStyle="regularSquare" imagePosition="left" controlSize="small" inset="2" id="645">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -554,8 +567,19 @@ Gw
                             <action selector="toggleRegularReload:" target="494" id="742"/>
                         </connections>
                     </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="5uC-rY-o3C">
+                        <rect key="frame" x="49" y="72" width="422" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="When Qdesktop launches, interact with web page" bezelStyle="regularSquare" imagePosition="left" controlSize="small" inset="2" id="rU6-xm-zeQ">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleRegularReload:" target="494" id="kEP-jl-7Vd"/>
+                        </connections>
+                    </button>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="684">
-                        <rect key="frame" x="248" y="74" width="47" height="14"/>
+                        <rect key="frame" x="248" y="97" width="47" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="minutes" id="685">
                             <font key="font" metaFont="smallSystem"/>
@@ -564,7 +588,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="743">
-                        <rect key="frame" x="190" y="72" width="52" height="19"/>
+                        <rect key="frame" x="190" y="95" width="52" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="52" id="750"/>
@@ -610,18 +634,22 @@ Gw
                     <constraint firstItem="743" firstAttribute="top" secondItem="596" secondAttribute="bottom" constant="8" symbolic="YES" id="772"/>
                     <constraint firstItem="644" firstAttribute="baseline" secondItem="743" secondAttribute="baseline" id="773"/>
                     <constraint firstItem="684" firstAttribute="baseline" secondItem="743" secondAttribute="baseline" id="774"/>
-                    <constraint firstItem="775" firstAttribute="top" secondItem="644" secondAttribute="bottom" constant="8" symbolic="YES" id="777"/>
-                    <constraint firstItem="775" firstAttribute="leading" secondItem="594" secondAttribute="leading" id="780"/>
-                    <constraint firstItem="781" firstAttribute="top" secondItem="775" secondAttribute="bottom" constant="8" symbolic="YES" id="795"/>
-                    <constraint firstItem="781" firstAttribute="leading" secondItem="644" secondAttribute="leading" id="796"/>
-                    <constraint firstItem="599" firstAttribute="trailing" secondItem="775" secondAttribute="trailing" id="803"/>
                     <constraint firstAttribute="trailing" secondItem="599" secondAttribute="trailing" constant="20" symbolic="YES" id="804"/>
                     <constraint firstItem="599" firstAttribute="leading" secondItem="601" secondAttribute="trailing" constant="8" symbolic="YES" id="805"/>
                     <constraint firstAttribute="bottom" secondItem="599" secondAttribute="bottom" constant="20" symbolic="YES" id="806"/>
                     <constraint firstAttribute="bottom" secondItem="601" secondAttribute="bottom" constant="20" symbolic="YES" id="807"/>
+                    <constraint firstItem="775" firstAttribute="trailing" secondItem="599" secondAttribute="trailing" id="HYQ-Cm-H4n"/>
+                    <constraint firstItem="5uC-rY-o3C" firstAttribute="leading" secondItem="781" secondAttribute="leading" id="VuY-zm-E8E"/>
+                    <constraint firstAttribute="bottom" secondItem="781" secondAttribute="bottom" constant="46" id="YtF-9n-ID6"/>
+                    <constraint firstItem="5uC-rY-o3C" firstAttribute="top" secondItem="743" secondAttribute="bottom" constant="8" symbolic="YES" id="ewE-9d-p1C"/>
+                    <constraint firstItem="781" firstAttribute="top" secondItem="775" secondAttribute="bottom" constant="8" id="iTp-SR-3He"/>
+                    <constraint firstItem="5uC-rY-o3C" firstAttribute="trailing" secondItem="775" secondAttribute="trailing" id="mae-RH-xn6"/>
+                    <constraint firstItem="775" firstAttribute="leading" secondItem="594" secondAttribute="leading" id="t0u-Fo-sa6"/>
+                    <constraint firstItem="781" firstAttribute="leading" secondItem="593" secondAttribute="leading" constant="52" id="xN0-Kj-2rf"/>
                 </constraints>
             </view>
         </window>
         <customObject id="767" customClass="SUUpdater"/>
+        <userDefaultsController representsSharedInstance="YES" id="Mu8-ru-sxC"/>
     </objects>
 </document>
