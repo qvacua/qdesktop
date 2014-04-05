@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
+
 @class QDWindow;
 
 @interface QDAppDelegate : NSObject <NSApplicationDelegate, NSUserInterfaceValidations>
@@ -21,14 +22,20 @@
 @property (weak) IBOutlet NSTextField *intervalTextField;
 @property (weak) IBOutlet NSButton *regularReloadCheckbox;
 
+#pragma mark IBActions
 - (IBAction)toggleBackground:(id)sender;
 - (IBAction)toggleRegularReload:(id)sender;
 
 - (IBAction)zoomIn:(id)sender;
 - (IBAction)zoomToActualSize:(id)sender;
 - (IBAction)zoomOut:(id)sender;
-
 - (IBAction)openPrefsWindow:(id)sender;
 - (IBAction)prefsWindowOk:(id)sender;
+
+#pragma mark NSUserInterfaceValidations
+- (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)anItem;
+
+#pragma mark NSAppDelegate
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 
 @end

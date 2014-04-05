@@ -10,6 +10,7 @@
 #import "QDWindow.h"
 #import "WebView+QDZoom.h"
 
+
 static NSString *const qDefaultUrlKey = @"url";
 static NSString *const qDefaultUrlValue = @"http://qvacua.com";
 static NSString *const qDefaultReloadRegularlyKey = @"update-regularly";
@@ -27,12 +28,11 @@ static const int qDefaultIntervalValue = 15;
 
 @end
 
-@implementation QDAppDelegate {
-}
+@implementation QDAppDelegate
 
 #pragma mark NSUserInterfaceValidations
 - (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)anItem {
-    const SEL action = [anItem action];
+    const SEL action = anItem.action;
 
     if (action == @selector(toggleBackground:)
             || action == @selector(prefsWindowOk:)
@@ -73,7 +73,7 @@ static const int qDefaultIntervalValue = 15;
 
 - (IBAction)toggleBackground:(id)sender {
     [self.window toggleDesktopBackground];
-    [self.webView.mainFrame.frameView setAllowsScrolling:!self.window.background];
+    self.webView.mainFrame.frameView.allowsScrolling = !self.window.background;
 }
 
 - (IBAction)zoomIn:(id)sender {
@@ -109,9 +109,9 @@ static const int qDefaultIntervalValue = 15;
 
 #pragma mark Private
 - (void)setDefaultFontSize {
-    [self.webView.preferences setDefaultFontSize:16];
-    [self.webView.preferences setDefaultFixedFontSize:16];
-    [self.webView.preferences setMinimumFontSize:9];
+    self.webView.preferences.defaultFontSize = 16;
+    self.webView.preferences.defaultFixedFontSize = 16;
+    self.webView.preferences.minimumFontSize = 9;
 }
 
 - (void)updateWebView {
@@ -123,9 +123,9 @@ static const int qDefaultIntervalValue = 15;
 - (void)initStatusMenu {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 
-    [self.statusItem setTitle:@"😎"];
-    [self.statusItem setHighlightMode:YES];
-    [self.statusItem setMenu:self.statusMenu];
+    self.statusItem.title = @"😎";
+    self.statusItem.highlightMode = YES;
+    self.statusItem.menu = self.statusMenu;
 }
 
 - (void)setDefaultsIfNecessary {
@@ -159,12 +159,14 @@ static const int qDefaultIntervalValue = 15;
 }
 
 - (void)syncPrefsUiElements {
-    [self.urlField setStringValue:self.url.absoluteString];
-    [self.regularReloadCheckbox setState:NSOffState];
+    self.urlField.stringValue = self.url.absoluteString;
+
+    self.regularReloadCheckbox.state = NSOffState;
     if (self.reloadRegularly) {
-        [self.regularReloadCheckbox setState:NSOnState];
+        self.regularReloadCheckbox.state = NSOnState;
     }
-    [self.intervalTextField setIntegerValue:self.interval];
+
+    self.intervalTextField.integerValue = self.interval;
 }
 
 - (void)resetTimer {
@@ -177,8 +179,7 @@ static const int qDefaultIntervalValue = 15;
 
     self.timer = [NSTimer timerWithTimeInterval:(self.interval * 60) target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
 
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    [runLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)timerFireMethod:(NSTimer *)theTimer {

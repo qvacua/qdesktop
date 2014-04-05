@@ -8,24 +8,16 @@
 
 #import "QDWindow.h"
 
+
 @interface QDWindow ()
 
 @property (readwrite) BOOL background;
 
 @end
 
-@implementation QDWindow {
-}
+@implementation QDWindow
 
-- (NSSize)screenResolution {
-    NSSize mainScreenSize = [[NSScreen mainScreen] frame].size;
-    CGFloat menuBarThickness = [[NSStatusBar systemStatusBar] thickness];
-
-    mainScreenSize.height -= menuBarThickness;
-
-    return mainScreenSize;
-}
-
+#pragma mark Public
 - (void)toggleDesktopBackground {
     if (self.background) {
         [self setLevel:NSNormalWindowLevel];
@@ -41,34 +33,36 @@
     self.background = YES;
 }
 
-- (void)fillScreen {
-    [self setContentSize:[self screenResolution]];
-    [self setFrameOrigin:NSMakePoint(0, 0)];
-}
+#pragma mark NSWindow
+- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle
+                  backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation {
 
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation {
 #ifdef DEBUG
     self = [super initWithContentRect:contentRect styleMask:windowStyle backing:bufferingType defer:deferCreation];
 #else
-    self = [super initWithContentRect:contentRect styleMask:NSBorderlessWindowMask backing:bufferingType defer:deferCreation];
+    self = [super initWithContentRect:contentRect styleMask:NSBorderlessWindowMask backing:bufferingType
+                                defer:deferCreation];
 #endif
 
-    if(self) {
-        _background = NO;
-
-#ifndef DEBUG
-        [self setCollectionBehavior:(NSWindowCollectionBehaviorCanJoinAllSpaces | NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorIgnoresCycle)];
-        [self fillScreen];
-#endif
-
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleScreenChange) name:NSApplicationDidChangeScreenParametersNotification object:nil];
+    if (!self) {
+        return nil;
     }
 
-    return self;
-}
+    _background = NO;
 
-- (BOOL)acceptsFirstResponder {
-    return !self.background;
+#ifndef DEBUG
+    self.collectionBehavior = NSWindowCollectionBehaviorCanJoinAllSpaces
+            | NSWindowCollectionBehaviorTransient
+            | NSWindowCollectionBehaviorIgnoresCycle;
+    [self fillScreen];
+#endif
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleScreenChange)
+                                                 name:NSApplicationDidChangeScreenParametersNotification
+                                               object:nil];
+
+    return self;
 }
 
 - (BOOL)canBecomeMainWindow {
@@ -79,9 +73,29 @@
     return !self.background;
 }
 
+#pragma mark NSResponder
+- (BOOL)acceptsFirstResponder {
+    return !self.background;
+}
+
+#pragma mark Private
+- (NSSize)screenResolution {
+    NSSize mainScreenSize = [[NSScreen mainScreen] frame].size;
+    CGFloat menuBarThickness = [[NSStatusBar systemStatusBar] thickness];
+
+    mainScreenSize.height -= menuBarThickness;
+
+    return mainScreenSize;
+}
+
+- (void)fillScreen {
+    self.contentSize = self.screenResolution;
+    self.frameOrigin = CGPointZero;
+}
+
 - (void)handleScreenChange {
-    [self setContentSize:[self screenResolution]];
-    [self setFrameOrigin:NSMakePoint(0, 0)];
+    self.contentSize = self.screenResolution;
+    self.frameOrigin = CGPointZero;
 }
 
 @end
